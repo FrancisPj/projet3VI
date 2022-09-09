@@ -8,6 +8,13 @@
     font-family: $font-txt;
     position: relative;
     z-index: 2;
+    @media screen and (min-width: 710px) and (max-width: 1024px) {
+        width: 40%;
+    }
+    @media screen and (min-width: 1024px)
+    {
+        width: 50%;
+    }
 
     &:hover {
         background-image: linear-gradient(to right, $primary-color 50%, $secondary-color);

@@ -56,6 +56,16 @@ footer {
   margin-left: 30px;
   text-align: left;
 }
+@media screen and (min-width: 480px) and (max-width: 710px) {
+  .footer {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer {
+    text-align: center;
+  }
+}
 .footer h4 {
   font-family: "Shrikhand", cursive, sans-serif;
   font-size: 20px;
@@ -89,6 +99,16 @@ footer {
   font-family: "Roboto", "Verdana", "Trebuchet", sans-serif;
   position: relative;
   z-index: 2;
+}
+@media screen and (min-width: 710px) and (max-width: 1024px) {
+  .btn {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .btn {
+    width: 50%;
+  }
 }
 .btn:hover {
   background-image: linear-gradient(to right, #9356DC 50%, #FF79DA);
@@ -129,9 +149,31 @@ footer {
   flex-direction: column;
   align-items: center;
 }
+@media screen and (min-width: 710px) and (max-width: 1024px) {
+  .fonct {
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .fonct {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    column-gap: 30px;
+    vertical-align: text-top;
+  }
+}
 .fonct__title {
   margin: 30px 0;
   align-self: flex-start;
+}
+@media screen and (min-width: 1024px) {
+  .fonct__title {
+    margin: auto;
+  }
 }
 
 .fonct__option {
@@ -145,6 +187,19 @@ footer {
   border-radius: 20px;
   width: 90%;
   box-shadow: 0 0 19px -3px rgba(0, 0, 0, 0.5);
+}
+@media screen and (min-width: 710px) and (max-width: 1024px) {
+  .fonct__option {
+    width: 45%;
+    margin-bottom: 15px;
+    padding-right: 5px;
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .fonct__option p {
+    text-align: left;
+  }
 }
 .fonct__option p {
   font-size: 15px;
