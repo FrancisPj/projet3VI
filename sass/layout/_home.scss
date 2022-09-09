@@ -46,10 +46,6 @@
     }
 
   &:hover {
-    span {
-      background: #f2eafb ;
-      color: black;
-    }
     i {
       color: $primary-color;
     }
@@ -60,13 +56,7 @@
     cursor: pointer;
     box-shadow: 2px 4px 8px 3px #bfbfc6;
     font-weight: bold;
-
-    & .option__number:hover {
-      background-color: #f2eafb;
-      color: black;
-    }
   }
-
 }
 
 .option__number {
@@ -98,7 +88,7 @@
 .menus {
   background:$color-bkg1grey ;
   padding-top: 20px;
-  margin-bottom: 45px;
+
 
 
   &__title {
@@ -113,6 +103,7 @@
   gap: 40px;
   justify-content: space-evenly;
   margin-bottom: 10px;
+  padding-bottom: 45px;
 
 /*pseudo élément*/
   .new {
@@ -171,7 +162,7 @@ width: 90%;
     i {
       font-size: 25px;
       position: absolute;
-      right: 20px;
+      right: 30px;
       top: 50%;
       transform: translateY(-50%);
       }
