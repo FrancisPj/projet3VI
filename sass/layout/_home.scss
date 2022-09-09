@@ -1,0 +1,192 @@
+
+.present {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 40px;
+  text-align: center;
+  background-color: $color-bkg1grey;
+
+   p {
+    font-weight: 100;
+    font-size: 18px;
+  }
+  &__title {
+    margin: 20px 50px;
+  }
+
+}
+
+.fonct {
+  margin: 20px 20px 40px 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    margin: 30px 0;
+    align-self: flex-start;
+  }
+}
+
+.fonct__option {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  border: none;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  width: 90%;
+  box-shadow: 0 0 19px -3px rgba(0, 0, 0, 0.5);
+  & p {
+    font-size: 15px;
+    }
+
+  &:hover {
+    span {
+      background: #f2eafb ;
+      color: black;
+    }
+    i {
+      color: $primary-color;
+    }
+    background-color: #f2eafb;
+    transform: scale(1.05);
+    transition-property: transform;
+    transition-duration: 200ms;
+    cursor: pointer;
+    box-shadow: 2px 4px 8px 3px #bfbfc6;
+    font-weight: bold;
+
+    & .option__number:hover {
+      background-color: #f2eafb;
+      color: black;
+    }
+  }
+
+}
+
+.option__number {
+  background-color: $primary-color;
+  color: $color-white;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  left: -20px;
+  position: relative;
+}
+
+.option:hover {
+  cursor: pointer;
+}
+.option__icon {
+  margin-right: 10px;
+  margin-left: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #8a8a95;
+  font-size: 1.3em;
+}
+
+
+.menus {
+  background:$color-bkg1grey ;
+  padding-top: 20px;
+  margin-bottom: 45px;
+
+
+  &__title {
+    padding-left: 30px;
+    margin: 30px 0;
+    align-self: flex-start;
+  }
+}
+.menus__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+
+/*pseudo élément*/
+  .new {
+    position: relative;
+    font-size: 12px;
+    &::before {
+      content: "Nouveau";
+      position: absolute;
+      height: 20px;
+      width: 65px;
+      background-color: $tertiary-color;
+      color: darken($tertiary-color, 50%);
+      text-align: center;
+      padding: 4px;
+      right: 10px;
+      top: 15px;
+    }
+  }
+}
+
+.card {
+width: 90%;
+  height: 270px;
+  background: $color-white;
+  border-radius: 20px;
+  padding-bottom: 5px;
+  box-shadow: 0 0 19px -3px rgba(0, 0, 0, 0.4);
+  p {
+    padding-left: 15px;
+    margin: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
+  }
+  h3 {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  &__image {
+    object-fit: cover;
+    object-position:  center;
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    border-radius: 20px 20px 0 0;
+  }
+  /*cours sur les boucles*/
+  @for $i from 1 through 4 {
+    &__image-#{$i} {
+      background-image: url("../../images/restaurants/rest-#{$i}.jpg");
+    }
+  }
+
+  &__description{
+    position: relative;
+
+    i {
+      font-size: 25px;
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      }
+
+    .fas {
+      color: transparent;
+      background:linear-gradient(30deg, $primary-color 30%, $secondary-color);
+      -webkit-background-clip: text;
+      opacity: 0;
+      transition: all 250ms ease-in-out;
+    }
+    &:hover .fas {
+      opacity: 1;
+      transform: translateY(-50%) scale(1.1);
+    }
+  }
+
+}

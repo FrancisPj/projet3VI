@@ -1,0 +1,36 @@
+footer{
+  background-color:$color-footer;
+  color: $color-white;
+  padding: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: left ;
+
+}
+.footer{
+  margin-left: 30px;
+  text-align: left;
+ & h3 {
+    font-family: $font-logo;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  & p {
+    color: transparent;
+    background-color: white;
+    list-style-type: none;
+    padding: 0;
+    -webkit-background-clip: text;
+    &:hover{
+      background:linear-gradient(20deg, $primary-color, $secondary-color);
+      -webkit-background-clip: text;
+    }
+
+    & i {
+      padding-right: 10px;
+      display: inline-block;
+      width: 15px;
+    }
+  }
+}

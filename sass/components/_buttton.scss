@@ -1,0 +1,26 @@
+.btn {
+    padding: 15px;
+    color: $color-white;
+    border-radius: 30px;
+    font-size: 1.1em;
+    width: 70%;
+    text-align: center;
+    font-family: $font-txt;
+    position: relative;
+    z-index: 2;
+
+    &:hover {
+        background-image: linear-gradient(to right, $primary-color 50%, $secondary-color);
+        transform: scale(1.05);
+        transition-property: transform;
+        transition-duration: 200ms;
+        cursor: pointer;
+        box-shadow: 2px 4px 8px 3px #bfbfc6;
+        font-weight: bold;
+        }
+}
+.present__btn {
+    margin: 10px;
+    background-image: linear-gradient(to right, $secondary-color, $primary-color);
+    box-shadow: 1px 0 3px 1px rgba(128, 128, 128, 0.7);
+}
