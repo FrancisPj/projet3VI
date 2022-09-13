@@ -3,16 +3,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 40px;
+  padding: 0 10px 40px 10px;
   text-align: center;
   background-color: $color-bkg1grey;
+
 
    p {
     font-weight: 100;
     font-size: 18px;
   }
   &__title {
-    margin: 20px 50px;
+    margin: 20px 0;
   }
 
 }
@@ -23,32 +24,26 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  @media screen and (min-width: 710px) and (max-width: 1024px) {
-    justify-content: center;
-    align-items: center;
-  }
-  @media screen and (min-width: 1024px)
-  {
-
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-end;
-    margin-bottom: 30px;
-    margin-top: 30px;
-    column-gap: 30px;
-    vertical-align: text-top;
-  }
 
   &__title {
     margin: 30px 0;
     align-self: flex-start;
-    @media screen and (min-width: 1024px)
-    {
-      margin: auto;
-    }
   }
 }
-
+.fonct__media {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 80%;
+  justify-content: space-around;
+  align-items: center;
+  @media screen and (min-width: 890px) and (max-width: 1900px) {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+    gap: 40px;
+  }
+}
 .fonct__option {
   margin: 20px 0;
   display: flex;
@@ -60,22 +55,17 @@
   border-radius: 20px;
   width: 90%;
   box-shadow: 0 0 19px -3px rgba(0, 0, 0, 0.5);
+  min-width: 250px;
 
-  @media screen and (min-width: 710px) and (max-width: 1024px) {
-    width: 45%;
-    margin-bottom: 15px;
-    padding-right: 5px;
-    font-size: 20px;
-  }
   @media screen and (min-width: 1024px)
   {
-
     p {
       text-align: left;
     }
   }
   & p {
     font-size: 15px;
+   text-justify: auto;
     }
 
   &:hover {
@@ -103,6 +93,7 @@
   border-radius: 100%;
   left: -20px;
   position: relative;
+  min-width: 40px;
 }
 
 .option:hover {
@@ -138,7 +129,13 @@
   margin-bottom: 10px;
   padding-bottom: 45px;
 
-/*pseudo élément*/
+  @media screen and (min-width: 710px) {
+    display: grid;
+    justify-content: space-evenly;
+
+    grid-template-columns: repeat(auto-fill, minmax(min(500px, 100%), 1fr));
+  }
+  /*pseudo élément*/
   .new {
     position: relative;
     font-size: 12px;
@@ -158,6 +155,9 @@
 }
 
 .card {
+  @media screen and (min-width: 710px) {
+    justify-self: center;
+  }
 width: 90%;
   height: 270px;
   background: $color-white;

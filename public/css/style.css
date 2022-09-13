@@ -56,14 +56,14 @@ footer {
   margin-left: 30px;
   text-align: left;
 }
-@media screen and (min-width: 480px) and (max-width: 710px) {
+@media screen and (min-width: 480px) and (min-width: 1024px) {
   .footer {
+    display: flex;
+    flex-direction: row;
     text-align: center;
   }
-}
-@media screen and (min-width: 1024px) {
-  .footer {
-    text-align: center;
+  .footer p {
+    margin-left: 50px;
   }
 }
 .footer h4 {
@@ -130,7 +130,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 40px;
+  padding: 0 10px 40px 10px;
   text-align: center;
   background-color: #e9e9e9;
 }
@@ -139,7 +139,7 @@ footer {
   font-size: 18px;
 }
 .present__title {
-  margin: 20px 50px;
+  margin: 20px 0;
 }
 
 .fonct {
@@ -149,30 +149,25 @@ footer {
   flex-direction: column;
   align-items: center;
 }
-@media screen and (min-width: 710px) and (max-width: 1024px) {
-  .fonct {
-    justify-content: center;
-    align-items: center;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .fonct {
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-end;
-    margin-bottom: 30px;
-    margin-top: 30px;
-    column-gap: 30px;
-    vertical-align: text-top;
-  }
-}
 .fonct__title {
   margin: 30px 0;
   align-self: flex-start;
 }
-@media screen and (min-width: 1024px) {
-  .fonct__title {
-    margin: auto;
+
+.fonct__media {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 80%;
+  justify-content: space-around;
+  align-items: center;
+}
+@media screen and (min-width: 890px) and (max-width: 1900px) {
+  .fonct__media {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+    gap: 40px;
   }
 }
 
@@ -187,14 +182,7 @@ footer {
   border-radius: 20px;
   width: 90%;
   box-shadow: 0 0 19px -3px rgba(0, 0, 0, 0.5);
-}
-@media screen and (min-width: 710px) and (max-width: 1024px) {
-  .fonct__option {
-    width: 45%;
-    margin-bottom: 15px;
-    padding-right: 5px;
-    font-size: 20px;
-  }
+  min-width: 250px;
 }
 @media screen and (min-width: 1024px) {
   .fonct__option p {
@@ -203,6 +191,7 @@ footer {
 }
 .fonct__option p {
   font-size: 15px;
+  text-justify: auto;
 }
 .fonct__option:hover {
   background-color: #f2eafb;
@@ -228,6 +217,7 @@ footer {
   border-radius: 100%;
   left: -20px;
   position: relative;
+  min-width: 40px;
 }
 
 .option:hover {
@@ -262,6 +252,13 @@ footer {
   padding-bottom: 45px;
   /*pseudo élément*/
 }
+@media screen and (min-width: 710px) {
+  .menus__cards {
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(auto-fill, minmax(min(500px, 100%), 1fr));
+  }
+}
 .menus__cards .new {
   position: relative;
   font-size: 12px;
@@ -287,6 +284,11 @@ footer {
   padding-bottom: 5px;
   box-shadow: 0 0 19px -3px rgba(0, 0, 0, 0.4);
   /*cours sur les boucles*/
+}
+@media screen and (min-width: 710px) {
+  .card {
+    justify-self: center;
+  }
 }
 .card p {
   padding-left: 15px;
