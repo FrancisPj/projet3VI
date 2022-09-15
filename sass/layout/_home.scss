@@ -208,13 +208,14 @@ width: 90%;
       opacity: 0;
       transition: all 250ms ease-in-out;
     }
-    &:hover .fas {
-      opacity: 1;
-      transform: translateY(-50%) scale(1.1);
-    }
   }
 
 }
+.fas:hover  {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+}
+
 .card:hover {
   transform: scale(1.03);
 }

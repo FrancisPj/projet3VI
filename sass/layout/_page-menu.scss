@@ -21,7 +21,7 @@ margin-top: -30px;
 
   & h2 {
     font-family: "Shrikhand", cursive, sans-serif;
-    margin-left: 30px;
+    margin-left: 15px;
   }
 }
   .resto__heart {
@@ -43,43 +43,189 @@ margin-top: -30px;
       opacity: 0;
       transition: all 250ms ease-in-out;
     }
-    &:hover .fas {
+  }
+.fas:hover {
       opacity: 1;
       transform: translateY(-50%) scale(1.1);
     }
-  }
+
 .menus {
   background:$color-bkg1grey;
-  display: grid;
-  grid-template-columns: 1fr;
+  padding-bottom: 40px;
   gap: 10px;
 }
-.menus__plats {
-  margin: 0 15px;
 
-}
-.menus__choix {
-  display: grid;
-  gap: 20px;
-}
-.menus__entrees {
+.debut {
   display: flex;
+  justify-content: space-around;
   position: relative;
-  background: $color-white;
-  border-radius: 40px;
-  height: 60px;
-  padding: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 20px 0 20px;
+  flex-direction: column;
+  align-items: flex-start;
+ /* opacity: 1;
+  transform: translateY(0);*/
+  &__border {
+    text-align: left;
+    padding-top: 5px;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-family: $font-txt;
+    margin-bottom: 20px;
+    &::after {
+      content: "";
+      display: block;
+      width:60%;
+      border-bottom: 3px solid $tertiary-color;
+      padding-top: 6px;
+    }
+  }
+.debut__entrees{
+  margin-left: 30px;
+  animation: slideup 2s forwards;
+  opacity: 0;
+}
 
-   .prix {
-    position: relative;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-weight: bold;
-     align-items: flex-end;
+.elements {
+  display: flex;
+  background-color: $color-white;
+  width: 95%;
+  margin: 16px 0;
+  overflow: hidden;
+  box-shadow: 0 0 10px 0 #00000066;
+  border-radius: 20px;
+  padding: 15px;
+  cursor: pointer;
+
+    &__plat {
+      white-space: nowrap;
+      text-overflow: ellipsis; /*...*/
+      overflow: hidden;/*Pour le positionnement de la coche*/
+      flex: 1;
+      font-size: smaller;
+          h3, p {
+        overflow: hidden; /*Pour éviter que le texte se mette à la ligne d'une façon peu esthétique*/
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      h3 {
+        margin: 5px 0;
+        padding:0 15px;
+      }
+      p {
+        margin: 1px 0;
+        padding:0 0 10px 15px;
+      }
+    }
   }
 }
-.menus__choix__check {
-  background: $tertiary-color;
+.prix {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-left: 8px;
+  font-weight: bold;
 
 }
+i.fas.fa-check-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #99E2D0;
+  color: white;
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  font-size: 30px;
+}
+
+.valide {
+  background-color: #99e2d0;
+  margin: -16px -80px -16px 16px;
+  width:64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
+ }
+.elements:hover .valide {
+  margin-right: -16px;
+}
+.rotation {
+  height: 26px;
+  width:26px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  transform: rotate(300deg);
+  transition-duration: 0.5s;
+}
+.elements:hover .rotation {
+  transform: rotate(0);
+}
+@media screen and (max-width: 1366px) {
+  .debut {
+    display: flex;
+    flex-direction: column;
+   /* align-items: center;*/
+  }
+  .elements {
+    width: 90%;
+    background-color: white;
+  }
+}
+/*MEDIUM*/
+@media screen and (max-width: 800px) {
+  .debut {
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+  }
+
+  .elements {
+    width: 90%;
+    background-color: white;
+  }
+}
+
+/*SMALL*/
+@media screen and (max-width: 667px) {
+
+  .debut {
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+  }
+
+  i.fas.fa-arrow-left {
+    font-size: x-large;
+    position: absolute;
+    left: 25px;
+  }
+
+  .elements {
+    width: 80%;
+    background-color: white;
+  }
+
+}
+
+@keyframes slideup {
+  0% {
+    transform: translateY(20px);
+    opacity: 0%;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 100%;
+  }
+}
+
+
+
+
+
