@@ -109,15 +109,15 @@
 }
 
 
-.menus {
+.menus__present {
   background:$color-bkg1grey ;
   padding-top: 20px;
 
 
 
-  &__title {
+  .menus__title {
     padding-left: 30px;
-    margin: 30px 0;
+  padding-bottom: 30px;
     align-self: flex-start;
   }
 }
@@ -125,13 +125,13 @@
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
-  justify-content: space-evenly;
-  margin-bottom: 10px;
+  justify-content:  space-around;
   padding-bottom: 45px;
+
 
   @media screen and (min-width: 710px) {
     display: grid;
-    justify-content: space-evenly;
+    justify-content:  space-around;
 
     grid-template-columns: repeat(auto-fill, minmax(min(500px, 100%), 1fr));
   }
@@ -139,6 +139,7 @@
   .new {
     position: relative;
     font-size: 12px;
+    height: 300px;
     &::before {
       content: "Nouveau";
       position: absolute;
@@ -178,7 +179,7 @@ width: 90%;
   &__image {
     object-fit: cover;
     object-position:  center;
-    height: 200px;
+    height: 230px;
     width: 100%;
     background-size: cover;
     border-radius: 20px 20px 0 0;
@@ -211,7 +212,7 @@ width: 90%;
   }
 
 }
-.fas:hover  {
+.rotat:hover  {
   opacity: 1;
   transform: translateY(-50%) scale(1.1);
 }

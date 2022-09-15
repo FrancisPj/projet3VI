@@ -1,3 +1,10 @@
+.header__arrow {
+  width: 40px;
+  position: absolute;
+  top: 10px;
+  left: 40px;
+  font-size: 30px;
+}
 .banner .img {
   display: block;/*même taille que le parent*/
   width: 100%;
@@ -29,7 +36,7 @@ margin-top: -30px;
     i {
       font-size: 25px;
       position: absolute;
-      right: 20px;
+      right: 30px;
       top: 50%;
       transform: translateY(-50%);
     }
@@ -38,35 +45,54 @@ margin-top: -30px;
     }
     .fas {
       color: transparent;
-      background: linear-gradient(30deg, $primary-color 30%, $secondary-color);
+      background:linear-gradient(30deg, $primary-color 30%, $secondary-color);
       -webkit-background-clip: text;
       opacity: 0;
       transition: all 250ms ease-in-out;
     }
-  }
-.fas:hover {
+    .fa-heart:hover {
       opacity: 1;
-      transform: scale(1.3);
+      transform: translateY(-50%) scale(1.3);
+    }
+  }
+
+.fa-check-circle:hover {
+      opacity: 1;
+      transform: scale(1.5);
     }
 
 .menus {
-  background:$color-bkg1grey;
+  display: flex;
+  background-color: $color-bkg1grey;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: start;
+  flex-wrap: wrap;
   padding-bottom: 40px;
-  gap: 10px;
 }
-
-.debut {
+.menus .plate{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 33%;
+  min-width: 325px;
+}
+.debut, .plats, .desserts{
   display: flex;
   justify-content: space-around;
   position: relative;
-  width: 100%;
+  width: 90%;
   box-sizing: border-box;
   padding: 0 20px 0 20px;
   flex-direction: column;
   align-items: flex-start;
- /* opacity: 1;
-  transform: translateY(0);*/
+
+
   &__border {
+    align-self: flex-start;
+    margin-top: 15px;
     text-align: left;
     padding-top: 5px;
     text-transform: uppercase;
@@ -80,17 +106,21 @@ margin-top: -30px;
       border-bottom: 3px solid $tertiary-color;
       padding-top: 6px;
     }
+
   }
 .debut__entrees{
   margin-left: 30px;
   animation: slideup 2s forwards;
   opacity: 0;
-}
+  }
 
 .elements {
   display: flex;
   background-color: $color-white;
-  width: 95%;
+  width: 90%;
+  max-width: 350px;
+
+  max-height: 100%;
   margin: 16px 0;
   overflow: hidden;
   box-shadow: 0 0 10px 0 #00000066;
@@ -115,11 +145,13 @@ margin-top: -30px;
       }
       p {
         margin: 1px 0;
-        padding:0 0 10px 15px;
+        padding-left: 15px;
       }
     }
   }
+
 }
+
 .prix {
   display: flex;
   justify-content: flex-end;
@@ -166,49 +198,14 @@ i.fas.fa-check-circle {
 .elements:hover .rotation {
   transform: rotate(0);
 }
-@media screen and (max-width: 1366px) {
-  .debut {
-    display: flex;
-    flex-direction: column;
-   /* align-items: center;*/
-  }
-  .elements {
-    width: 90%;
-    background-color: white;
-  }
-}
-/*MEDIUM*/
-@media screen and (max-width: 800px) {
-  .debut {
-    display: flex;
-    flex-direction: column;
-    /*align-items: center;*/
-  }
 
-  .elements {
-    width: 90%;
-    background-color: white;
-  }
-}
-
-/*SMALL*/
-@media screen and (max-width: 667px) {
-
-  .debut {
-    display: flex;
-    flex-direction: column;
-    /*align-items: center;*/
-  }
-
-  i.fas.fa-arrow-left {
-    font-size: x-large;
-    position: absolute;
-    left: 25px;
-  }
-
-  .elements {
-    width: 80%;
-    background-color: white;
+.command {
+  font-size: 1.1em;
+  width: 45%;
+  text-align: center;
+  font-family: $font-txt;
+  @media screen and (min-width: 710px) {
+    width: 25%;
   }
 
 }
@@ -216,7 +213,7 @@ i.fas.fa-check-circle {
 @keyframes slideup {
   0% {
     transform: translateY(20px);
-    opacity: 0%;
+    opacity: 1%;
   }
 
   100% {

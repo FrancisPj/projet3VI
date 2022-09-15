@@ -8,7 +8,6 @@ body {
   background-color: #FFF;
   padding: 0;
   margin: 0;
-  background: #FFF;
   font-family: "Roboto", "Verdana", "Trebuchet", sans-serif;
 }
 
@@ -244,13 +243,13 @@ footer {
   font-size: 1.3em;
 }
 
-.menus {
+.menus__present {
   background: #e9e9e9;
   padding-top: 20px;
 }
-.menus__title {
+.menus__present .menus__title {
   padding-left: 30px;
-  margin: 30px 0;
+  padding-bottom: 30px;
   align-self: flex-start;
 }
 
@@ -258,21 +257,21 @@ footer {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
-  justify-content: space-evenly;
-  margin-bottom: 10px;
+  justify-content: space-around;
   padding-bottom: 45px;
   /*pseudo élément*/
 }
 @media screen and (min-width: 710px) {
   .menus__cards {
     display: grid;
-    justify-content: space-evenly;
+    justify-content: space-around;
     grid-template-columns: repeat(auto-fill, minmax(min(500px, 100%), 1fr));
   }
 }
 .menus__cards .new {
   position: relative;
   font-size: 12px;
+  height: 300px;
 }
 .menus__cards .new::before {
   content: "Nouveau";
@@ -314,7 +313,7 @@ footer {
 .card__image {
   object-fit: cover;
   object-position: center;
-  height: 200px;
+  height: 230px;
   width: 100%;
   background-size: cover;
   border-radius: 20px 20px 0 0;
@@ -349,7 +348,7 @@ footer {
   transition: all 250ms ease-in-out;
 }
 
-.fas:hover {
+.rotat:hover {
   opacity: 1;
   transform: translateY(-50%) scale(1.1);
 }
@@ -388,6 +387,14 @@ footer {
   outline: none;
 }
 
+.header__arrow {
+  width: 40px;
+  position: absolute;
+  top: 10px;
+  left: 40px;
+  font-size: 30px;
+}
+
 .banner .img {
   display: block; /*même taille que le parent*/
   width: 100%;
@@ -419,7 +426,7 @@ footer {
 .resto__heart i {
   font-size: 25px;
   position: absolute;
-  right: 20px;
+  right: 30px;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -433,31 +440,49 @@ footer {
   opacity: 0;
   transition: all 250ms ease-in-out;
 }
-
-.fas:hover {
+.resto__heart .fa-heart:hover {
   opacity: 1;
-  transform: scale(1.3);
+  transform: translateY(-50%) scale(1.3);
+}
+
+.fa-check-circle:hover {
+  opacity: 1;
+  transform: scale(1.5);
 }
 
 .menus {
-  background: #e9e9e9;
+  display: flex;
+  background-color: #e9e9e9;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: start;
+  flex-wrap: wrap;
   padding-bottom: 40px;
-  gap: 10px;
 }
 
-.debut {
+.menus .plate {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 33%;
+  min-width: 325px;
+}
+
+.debut, .plats, .desserts {
   display: flex;
   justify-content: space-around;
   position: relative;
-  width: 100%;
+  width: 90%;
   box-sizing: border-box;
   padding: 0 20px 0 20px;
   flex-direction: column;
   align-items: flex-start;
-  /* opacity: 1;
-   transform: translateY(0);*/
 }
-.debut__border {
+.debut__border, .plats__border, .desserts__border {
+  align-self: flex-start;
+  margin-top: 15px;
   text-align: left;
   padding-top: 5px;
   text-transform: uppercase;
@@ -465,22 +490,24 @@ footer {
   font-family: "Roboto", "Verdana", "Trebuchet", sans-serif;
   margin-bottom: 20px;
 }
-.debut__border::after {
+.debut__border::after, .plats__border::after, .desserts__border::after {
   content: "";
   display: block;
   width: 60%;
   border-bottom: 3px solid #99E2D0;
   padding-top: 6px;
 }
-.debut .debut__entrees {
+.debut .debut__entrees, .plats .debut__entrees, .desserts .debut__entrees {
   margin-left: 30px;
   animation: slideup 2s forwards;
   opacity: 0;
 }
-.debut .elements {
+.debut .elements, .plats .elements, .desserts .elements {
   display: flex;
   background-color: #FFF;
-  width: 95%;
+  width: 90%;
+  max-width: 350px;
+  max-height: 100%;
   margin: 16px 0;
   overflow: hidden;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
@@ -488,25 +515,25 @@ footer {
   padding: 15px;
   cursor: pointer;
 }
-.debut .elements__plat {
+.debut .elements__plat, .plats .elements__plat, .desserts .elements__plat {
   white-space: nowrap;
   text-overflow: ellipsis; /*...*/
   overflow: hidden; /*Pour le positionnement de la coche*/
   flex: 1;
   font-size: smaller;
 }
-.debut .elements__plat h3, .debut .elements__plat p {
+.debut .elements__plat h3, .debut .elements__plat p, .plats .elements__plat h3, .plats .elements__plat p, .desserts .elements__plat h3, .desserts .elements__plat p {
   overflow: hidden; /*Pour éviter que le texte se mette à la ligne d'une façon peu esthétique*/
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.debut .elements__plat h3 {
+.debut .elements__plat h3, .plats .elements__plat h3, .desserts .elements__plat h3 {
   margin: 5px 0;
   padding: 0 15px;
 }
-.debut .elements__plat p {
+.debut .elements__plat p, .plats .elements__plat p, .desserts .elements__plat p {
   margin: 1px 0;
-  padding: 0 0 10px 15px;
+  padding-left: 15px;
 }
 
 .prix {
@@ -559,50 +586,22 @@ i.fas.fa-check-circle {
   transform: rotate(0);
 }
 
-@media screen and (max-width: 1366px) {
-  .debut {
-    display: flex;
-    flex-direction: column;
-    /* align-items: center;*/
-  }
-  .elements {
-    width: 90%;
-    background-color: white;
+.command {
+  font-size: 1.1em;
+  width: 45%;
+  text-align: center;
+  font-family: "Roboto", "Verdana", "Trebuchet", sans-serif;
+}
+@media screen and (min-width: 710px) {
+  .command {
+    width: 25%;
   }
 }
-/*MEDIUM*/
-@media screen and (max-width: 800px) {
-  .debut {
-    display: flex;
-    flex-direction: column;
-    /*align-items: center;*/
-  }
-  .elements {
-    width: 90%;
-    background-color: white;
-  }
-}
-/*SMALL*/
-@media screen and (max-width: 667px) {
-  .debut {
-    display: flex;
-    flex-direction: column;
-    /*align-items: center;*/
-  }
-  i.fas.fa-arrow-left {
-    font-size: x-large;
-    position: absolute;
-    left: 25px;
-  }
-  .elements {
-    width: 80%;
-    background-color: white;
-  }
-}
+
 @keyframes slideup {
   0% {
     transform: translateY(20px);
-    opacity: 0%;
+    opacity: 1%;
   }
   100% {
     transform: translateY(0px);
