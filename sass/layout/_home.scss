@@ -129,6 +129,7 @@
   padding-bottom: 45px;
 
 
+
   @media screen and (min-width: 710px) {
     display: grid;
     justify-content:  space-around;
@@ -139,7 +140,7 @@
   .new {
     position: relative;
     font-size: 12px;
-    height: 300px;
+
     &::before {
       content: "Nouveau";
       position: absolute;
@@ -156,11 +157,12 @@
 }
 
 .card {
+
   @media screen and (min-width: 710px) {
     justify-self: center;
   }
 width: 90%;
-  height: 270px;
+  height: 300px;
   background: $color-white;
   border-radius: 20px;
   padding-bottom: 5px;
