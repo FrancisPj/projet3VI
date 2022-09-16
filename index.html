@@ -4,8 +4,7 @@
     <!--INFOS SUR LA PAGE HTML-->
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="icon" type="image/x-icon" href="/images/logo/favicon.ico">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,11 +15,15 @@
     <script src="https://kit.fontawesome.com/e09021af75.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" type="text/css" href="public/css/normalize.css">
+    <link rel="stylesheet" href="sass/utils/loader.scss"/>
     <link rel="stylesheet" href="public/css/style.css"/>
+
     <title>Projet 3 - Oh My Food FJ</title>
 </head>
 <body>
-
+    <div class="loader">
+        <h1 class="loading" data-text="OhMyFood...">OhMyFood...</h1>
+    </div>
 <header>
     <h1>
         ohmyfood
