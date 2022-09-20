@@ -112,12 +112,12 @@ footer {
 }
 @media screen and (min-width: 710px) and (max-width: 1024px) {
   .btn {
-    width: 40%;
+    width: 35%;
   }
 }
 @media screen and (min-width: 1024px) {
   .btn {
-    width: 35%;
+    width: 20%;
   }
 }
 .btn:hover {
@@ -172,7 +172,15 @@ footer {
   justify-content: space-around;
   align-items: center;
 }
-@media screen and (min-width: 890px) and (max-width: 1900px) {
+@media screen and (min-width: 890px) {
+  .fonct__media {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+    gap: 40px;
+  }
+}
+@media screen and (min-width: 1900px) {
   .fonct__media {
     flex-direction: row;
     justify-content: space-between;
@@ -265,7 +273,15 @@ footer {
   .menus__cards {
     display: grid;
     justify-content: space-around;
-    grid-template-columns: repeat(auto-fill, minmax(min(500px, 100%), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(400px, 100%), 1fr));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menus__cards {
+    display: flex;
+    flex-flow: row;
+    justify-content: initial;
+    margin: 0 4%;
   }
 }
 .menus__cards .new {
