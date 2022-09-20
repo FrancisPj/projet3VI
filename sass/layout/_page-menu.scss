@@ -1,9 +1,12 @@
 .header__arrow {
   width: 40px;
   position: absolute;
-  top: 10px;
-  left: 40px;
+  top: 23px;
+  left: 25px;
   font-size: 30px;
+  @media screen and (min-width: 890px) {
+    top: 33px;
+  }
 }
 .banner .img {
   display: block;/*même taille que le parent*/
@@ -51,7 +54,7 @@
     }
     .fa-heart:hover {
       opacity: 1;
-      transform: translateY(-50%) scale(1.3);
+      transform: translateY(-50%) scale(1);
     }
   }
 
