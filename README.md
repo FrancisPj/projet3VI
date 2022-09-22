@@ -47,7 +47,7 @@ Page d'accueil
 
 Pages de menu
 
-    Menu des restaus
+    Menu des restaurants
 
 Footer
 
