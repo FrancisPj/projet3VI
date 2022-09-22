@@ -70,6 +70,6 @@ Page d'accueil
 
 Pages de menu
 
-    Effet d'affichage du menu un par un (voir l'animation fournie)
+    Effet d'affichage du menu un par un.
     Effet d'ajout au panier avec le panier qui vient de la droite au hover. Si le nom du plat est trop long, mettre "..."
 
