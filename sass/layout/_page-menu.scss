@@ -9,9 +9,10 @@
   }
 }
 .banner .img {
-  display: block;/*même taille que le parent*/
+  /*même taille que le parent*/
+  display: block;
   width: 100%;
-  height: 400px;
+  height: 250px;
   object-fit: cover;
   object-position:  center;
   position:relative;
@@ -21,7 +22,7 @@
 .resto__main {
    width: 100%;
   margin-top: -30px;
-  padding-top: 50px;
+  padding-top:20px;
   background: $color-bkg1grey;
   border-radius: 40px 40px 0 0;
   padding-bottom: 30px;
@@ -38,7 +39,7 @@
     i {
       font-size: 25px;
       position: absolute;
-      right: 30px;
+      right: 40px;
       top: 50%;
       transform: translateY(-50%);
     }
@@ -78,8 +79,11 @@
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  width: 33%;
+  width: 100%;
   min-width: 325px;
+  @media screen and (min-width: 710px) {
+    width: 33%;
+  }
 }
 .debut, .plats, .desserts{
   animation: slideup 2s forwards;
@@ -141,7 +145,7 @@
   display: flex;
   background-color: $color-white;
   width: 90%;
-  max-width: 350px;
+  /*max-width: 350px;*/
 
   max-height: 100%;
   margin: 16px 0;
@@ -153,12 +157,14 @@
 
     &__plat {
       white-space: nowrap;
-      text-overflow: ellipsis; /*...*/
-      overflow: hidden;/*Pour le positionnement de la coche*/
+      text-overflow: ellipsis;
+      /*Pour le positionnement de la coche*/
+      overflow: hidden;
       flex: 1;
       font-size: smaller;
+      /*Pour éviter que le texte se mette à la ligne d'une façon peu esthétique*/
           h3, p {
-        overflow: hidden; /*Pour éviter que le texte se mette à la ligne d'une façon peu esthétique*/
+        overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
       }
