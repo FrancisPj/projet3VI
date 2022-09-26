@@ -347,16 +347,16 @@ footer {
   border-radius: 20px 20px 0 0;
 }
 .card__image-1 {
-  background-image: url("../../images/restaurants/rest-1.jpg");
+  background-image: url("../../../images/restaurants/rest-1.jpg");
 }
 .card__image-2 {
-  background-image: url("../../images/restaurants/rest-2.jpg");
+  background-image: url("../../../images/restaurants/rest-2.jpg");
 }
 .card__image-3 {
-  background-image: url("../../images/restaurants/rest-3.jpg");
+  background-image: url("../../../images/restaurants/rest-3.jpg");
 }
 .card__image-4 {
-  background-image: url("../../images/restaurants/rest-4.jpg");
+  background-image: url("../../../images/restaurants/rest-4.jpg");
 }
 .card__description {
   position: relative;
