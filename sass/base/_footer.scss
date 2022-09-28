@@ -6,7 +6,6 @@ footer{
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: left ;
-
 }
 .footer{
   line-height: 2em;
@@ -28,9 +27,8 @@ footer{
     font-weight: 500;
     margin: 0;
    padding-right: 60px;
-
-
   }
+
   & a {
     width: 90%;
     display: flex;
@@ -41,7 +39,6 @@ footer{
     -webkit-background-clip: text;
     @media screen and (min-width: 710px) {
      padding-top: 0;
-
     }
 
     &:hover{
