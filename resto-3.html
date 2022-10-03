@@ -1,36 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!--INFOS SUR LA PAGE HTML-->
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="icon" type="image/x-icon" href="/images/logo/favicon.ico">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@300;400&family=Roboto:wght@300;400;500&family=Shrikhand&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&family=Roboto:wght@100;300;400;500&family=Shrikhand&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e09021af75.js" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" type="text/css" href="../public/css/normalize.css">
-    <link rel="stylesheet"  href="../public/css/style.css" />
-    <title>Le délice des sens</title>
+    <link rel="stylesheet" type="text/css" href="public/css/normalize.css">
+    <link rel="stylesheet" href="public/css/prefixed/style.css">
+    <title>Projet 3 - Oh My Food FJ</title>
 </head>
 <body>
-    <header>
-        <h1>
-            ohmyfood
-        </h1>
-    </header>
-    <a href="../index.html"><i class="fas fa-arrow-left header__arrow"></i></a>
+<header class="header__menu">
+    <img src="https://saika667.github.io/P3_oh_my_food/images/ohmyfood.png" id="oh-my-food-logo" alt="logo-oh-my-food">
+
+    <a id="button-back" href="index.html">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+</header>
 <div class="banner">
-    <img src="../images/restaurants/rest-4.jpg" alt="Le délice des sens" class="img">
+    <img src="images/restaurants/rest-3.jpg" alt="À la française" class="img">
 </div>
 <article class="resto__main">
 
     <div class="resto__heart">
-        <h2 class="">Le délice des sens</h2>
+        <h2 class="">À la française</h2>
         <i class="far fa-heart"></i>
         <i class="fas fa-heart"></i>
     </div>
@@ -41,8 +39,8 @@
             <h2 class="debut__border" >Entrées</h2>
             <div class="debut__entrees elements">
                 <div class="elements__plat">
-                    <h3>Tartare de thon</h3>
-                    <p>Assaisonné au yuzu</p>
+                    <h3>Tartare de poulpe acidulé</h3>
+                    <p>Aux zestes d'orange</p>
                 </div>
                 <span class="prix">25€</span>
                 <div class="valide">
@@ -53,8 +51,8 @@
             </div>
             <div class="debut__entrees elements">
                 <div class="elements__plat">
-                    <h3>Bouchée de homard croustillant</h3>
-                    <p>Et sa farandole de petits légumes</p>
+                    <h3>Velouté de légumes d'antan</h3>
+                    <p>Carotte, panais, topinambour</p>
                 </div>
                 <span class="prix">35€</span>
                 <div class="valide">
@@ -65,8 +63,8 @@
             </div>
             <div class="debut__entrees elements">
                 <div class="elements__plat">
-                    <h3>Velouté de cèpes</h3>
-                    <p>Aux truffes</p>
+                    <h3>Soupe à l'oignon</h3>
+                    <p>Revisitée</p>
                 </div>
                 <span class="prix">20€</span>
                 <div class="valide">
@@ -81,8 +79,8 @@
             <h2 class="debut__border" >Plats</h2>
             <div class="debut__entrees elements">
                 <div class="elements__plat">
-                    <h3>Poulet rôti aux herbes de Provence</h3>
-                    <p>Et sa crème de truffe</p>
+                    <h3>Coquilles Saint-Jacques</h3>
+                    <p>Accompagnées d'une purée de panais</p>
                 </div>
                 <span class="prix">40€</span>
                 <div class="valide">
@@ -93,8 +91,8 @@
             </div>
             <div class="debut__entrees elements">
                 <div class="elements__plat">
-                    <h3>Langouste rôtie</h3>
-                    <p>Et ses légumes de saison</p>
+                    <h3>Magret de canard</h3>
+                    <p>Et parmentier de pommes de terre</p>
                 </div>
                 <span class="prix">35€</span>
                 <div class="valide">
@@ -105,8 +103,8 @@
             </div>
             <div class="debut__entrees elements">
                 <div class="elements__plat">
-                    <h3>Côte de boeuf Angus</h3>
-                    <p>Et sa purée de panais</p>
+                    <h3>Pigeonneau d’Ille-et-Vilaine</h3>
+                    <p>Sur son lit de gnocchis aux légumes</p>
                 </div>
                 <span class="prix">44€</span>
                 <div class="valide">
@@ -121,8 +119,8 @@
             <h2 class="debut__border" >Desserts</h2>
             <div class="debut__entrees elements">
                 <div class="elements__plat">
-                    <h3>Farandole de desserts</h3>
-                    <p>Du chef</p>
+                    <h3>Pétales de violettes glacés</h3>
+                    <p>Et purée de noisettes</p>
                 </div>
                 <span class="prix">18€</span>
                 <div class="valide">
@@ -133,8 +131,8 @@
             </div>
             <div class="debut__entrees elements">
                 <div class="elements__plat">
-                    <h3>Crème brulée</h3>
-                    <p>Revisitée</p>
+                    <h3>Fondant au chocolat</h3>
+                    <p>Revisité</p>
                 </div>
                 <span class="prix">22€</span>
                 <div class="valide">
@@ -145,8 +143,8 @@
             </div>
             <div class="debut__entrees elements">
                 <div class="elements__plat">
-                    <h3>Tiramisu</h3>
-                    <p>À la noisette</p>
+                    <h3>Millefeuille croustillant</h3>
+                    <p>Myrtilles et pâte d’amande</p>
                 </div>
                 <span class="prix">23€</span>
                 <div class="valide">
@@ -160,7 +158,7 @@
 </section>
     <div class="present">
         <div class="btn present__btn command">
-            <a href="../index.html">Commander</a>
+            <a href="index.html">Commander</a>
         </div>
     </div>
     <footer>

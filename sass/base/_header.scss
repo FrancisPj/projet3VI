@@ -1,19 +1,31 @@
-header {
-  text-align: center;
+.header__menu {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
   position: relative;
   box-shadow: 0 6px 8px $color-shad-logo;
-
-  & h1{
-    font-family: $font-logo;
-    font-size: 28px;
-    margin: 0;
-    padding: 20px 0;
 }
-  @media screen and (min-width: 890px) {
-    h1 {
-      font-size: 45px;
+  #oh-my-food-logo {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom:10px;
+    @media screen and (min-width: 710px) {
+      width: 30%;
     }
   }
-}
-
+  #button-back {
+    background-color: white;
+    border: none;
+    position: absolute;
+    left: 10px;
+    cursor: pointer;
+  }
+  #button-back i {
+    font-size: 25px;
+    @media screen and (min-width: 710px) {
+      font-size: 30px;
+    }
+  }
 
