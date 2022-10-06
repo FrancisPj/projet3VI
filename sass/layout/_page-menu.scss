@@ -77,6 +77,7 @@
     width: 33%;
   }
 }
+//décalage dans le temps
 .debut, .plats, .desserts{
   animation: slideup 2s forwards;
   opacity: 0;
@@ -184,7 +185,7 @@ i.fas.fa-check-circle {
   border-radius: 100%;
   font-size: 30px;
 }
-
+//petite coche à droite du plat
 .valide {
   background-color: #99e2d0;
   margin: -16px -80px -16px 16px;
