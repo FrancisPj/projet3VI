@@ -4,6 +4,9 @@
 }
 
 body {
+  @media screen and (min-width: 1160px) {
+    width: 80%;
+  }
   background-color: $color-white;
   padding: 0;
   margin: 0 auto;
