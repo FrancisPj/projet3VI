@@ -8,7 +8,9 @@
   position:relative;
   z-index:-1;
 }
-
+.shad{
+  box-shadow: none;
+}
 .resto__main {
    width: 100%;
   margin-top: -30px;
@@ -16,9 +18,10 @@
   background: $color-bkg1grey;
   border-radius: 40px 40px 0 0;
   padding-bottom: 30px;
-  box-shadow: 0 0 19px -3px rgba(0, 0, 0, 0.4);
+  /*box-shadow: 0 0 19px -3px rgba(0, 0, 0, 0.4);*/
   & h2 {
     font-family: $font-logo;
+    padding-left: 20px;
     margin-left: 15px;
     font-size: 20px;
     @media screen and (min-width: 710px) {
