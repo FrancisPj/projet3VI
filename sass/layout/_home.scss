@@ -192,6 +192,7 @@
     background-size: cover;
     border-radius: 20px 20px 0 0;
   }
+
   //coeur
   &__description{
     position: relative;
@@ -203,7 +204,7 @@
       transform: translateY(-50%);
       @media screen and (min-width: 890px) {
         right: 10px;
-      }
+        }
       }
     .fas {
       color: transparent;
@@ -214,7 +215,8 @@
     }
   }
 }
-.rotat:hover {
+
+.rotat:active {
   opacity: 1;
   transform: translateY(-50%) scale(1.1);
 }
