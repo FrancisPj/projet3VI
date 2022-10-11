@@ -41,11 +41,11 @@ footer{
      padding-top: 0;
     }
 
-    &:active{
-      background:$secondary-color;
-      -webkit-background-clip: text;
-      font-weight: bold;
-    }
+    ///*&:active{
+    //  background:$secondary-color;
+    //  -webkit-background-clip: text;
+    //  font-weight: bold;
+    //}*/
 
     & i {
       padding: 10px 15px 10px 0;
