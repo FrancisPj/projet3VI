@@ -152,7 +152,7 @@
       flex: 1;
       font-size: smaller;
       //Pour éviter que le texte se mette à la ligne d'une façon peu esthétique
-          h3, p {
+      p {
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
@@ -160,6 +160,7 @@
       h3 {
         margin: 5px 0;
         padding:0 15px;
+        white-space: pre-line;
       }
       p {
         margin: 1px 0;
